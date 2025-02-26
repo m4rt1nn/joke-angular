@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: joke-angular-container
-        image: registry:5000/m4rt1nn/joke-angular:0.0.1
+        image: registry:5000/m4rt1nn/joke-angular:0.0.2
         ports:
         - containerPort: 80
         resources:
