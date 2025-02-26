@@ -1,8 +1,19 @@
-<table>
-    <tr>
-        <td>{{ joke?.setup }}</td>
-    </tr>
-    <tr>
-        <td>{{ joke?.punchline }}</td>
-    </tr>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Joke</title>
+</head>
+
+<body>
+    <div class="joke-container">
+        <div class="joke-card">
+            <h1 class="joke-setup">{{ joke?.setup }}</h1>
+            <p class="joke-punchline">{{ joke?.punchline }}</p>
+        </div>
+    </div>
+</body>
+
+</html>

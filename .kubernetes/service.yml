@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: joke-angular-service
+  namespace: joker
+spec:
+  selector:
+    app: joke-angular-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort

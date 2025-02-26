@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jokes-angular-deployment
+  namespace: joker
+  labels:
+    app: jokes-angular-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: joke-angular-pod
+  template:
+    metadata:
+      labels:
+        app: joke-angular-pod
+    spec:
+      containers:
+      - name: joke-angular-container
+        image: registry:5000/m4rt1nn/joke-angular:0.0.1
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
